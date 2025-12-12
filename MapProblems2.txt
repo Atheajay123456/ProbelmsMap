@@ -1,0 +1,108 @@
+package Map;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Maps {
+
+	public static void main(String[] args) {
+//		String name ="asfd @;123 profiles , you can saperate";
+//		LinkedHashMap<Character,Integer> ch= new LinkedHashMap<>();
+//		for(char c:name.toCharArray()) {
+//			if(Character.isAlphabetic(c)) {
+//				if("AEIOUaeiou".indexOf(c)==-1) {
+//					ch.put(c, ch.getOrDefault(c, 0)+1);
+//				}
+//				
+//			}
+//		}
+//		System.out.println(ch);
+//		 char op=' ';
+//		 int max=Integer.MIN_VALUE;
+//		 for(Map.Entry<Character, Integer> m :ch.entrySet()) {
+//			 if(max<m.getValue()) {
+//				 max=m.getValue();
+//				 op=m.getKey();
+//				 } 
+//		 }
+//		 System.out.println("Highest count :" + op + "=" +max);
+		
+		
+//		String s="racecar";
+//		HashMap<Character,Integer> h=new HashMap<>();
+//		for(char ch:s.toCharArray()) {
+//			if(h.containsKey(ch)) {
+//				h.put(ch,h.get(ch)+1);
+//			}
+//			else{
+//				h.put(ch, 1);
+//			}
+//		}
+//		System.out.println(h);
+		
+//		String s="racecar";
+//		HashMap<Character,Integer> h=new HashMap<>();
+//		for(char ch:s.toCharArray()) {
+//				h.put(ch,h.getOrDefault(ch, 0)+1);
+//		}
+//		System.out.println(h);
+//	
+		
+		
+		
+//		Map<String,String> users = new HashMap<String, String>();
+//		
+//		users.put("hii", "hello");
+//		users.put("world", "beaty");
+//		users.put("Stay", "tuned");
+//		
+//		Set<Map.Entry<String, String>> res=users.entrySet();
+//		for(Map.Entry<String, String> keyvalue : res) {
+//			System.out.println(keyvalue);
+//		}
+		
+//		Map<Integer,Integer> nums = new HashMap<Integer,Integer>();
+//		Map<Integer,Integer> res = new HashMap<Integer,Integer>();
+//		
+//		nums.put(1, 1);
+//		nums.put(2, 2);
+//		nums.put(3, 1);
+//		nums.put(4, 3);
+//		nums.put(5, 2);
+//		nums.put(6, 3);
+//		
+//		for(Integer value : nums.values()) {
+//			res.put(value, res.getOrDefault(value, 0) +1);
+//		} 
+//		System.out.println(res);
+		
+		Map<String,String> input = new HashMap<String,String>();
+		Map<String,Integer> res = new HashMap();
+		
+		input.put("John", "IT");
+		input.put("Joe", "HR");
+		input.put("Jenny", "sales");
+		input.put("Joy", "HR");
+		input.put("Jyo", "IT");
+		
+		for(String value : input.values()) {
+			res.put(value, res.getOrDefault(value, 0) +1);
+		} 
+		Map<String,String> uniq = new HashMap();
+		
+		for(Map.Entry<String, String> x: input.entrySet()) {
+			String name = x.getKey();
+			String value = x.getValue();
+			
+			if(res.get(value) == 1) {
+				uniq.put(name, value);
+			}
+		}
+		System.out.println(uniq);
+		
+		}
+
+}
